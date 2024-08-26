@@ -1,0 +1,10 @@
+** This will take time
+npx create-react-app 01BasicReact
+
+npm = node package manager
+npx = node package executer
+
+npm run start
+
+-- -----------------------------------
+npm create vite@latest
