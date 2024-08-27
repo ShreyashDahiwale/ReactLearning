@@ -8,3 +8,15 @@ npm run start
 
 -- -----------------------------------
 npm create vite@latest
+
+--------------------------------
+'react' is a core foundational library
+'react-dom' is an implementation of 'react' on Web
+React creates it's own DOM.
+React gives you the power to render your HTML element with JavaScript (jsx).
+Now, you have programming capabilities with HTML to manage complex UIs.
+
+We have all the HTML code in single Index file that's why it's a Single Page Application (SPA)
+
+-- ---------------------------------------------
+When you are creating Components always name them with Capitalized initial
