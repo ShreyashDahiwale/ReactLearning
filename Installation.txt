@@ -20,3 +20,8 @@ We have all the HTML code in single Index file that's why it's a Single Page App
 
 -- ---------------------------------------------
 When you are creating Components always name them with Capitalized initial
+
+-- -------------------------------------------
+React.createElement is an method, which is, by default injected by the Bable (transpiler). Babel is a JavaScript compiler
+
+https://github.com/facebook/react
