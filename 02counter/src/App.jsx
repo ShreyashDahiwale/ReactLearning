@@ -9,9 +9,19 @@ function App() {
   const addValue = () => {
     // console.log("Value Added", Math.random());
     if (counter < 20) {
-      counter = counter + 1;
-      setCounter(counter)
+      // counter = counter + 1;
+      setCounter( (prevCounter) => {return prevCounter + 1})
+      setCounter((prevCounter) => prevCounter + 1)
+      setCounter((prevCounter) => prevCounter + 1)
+      setCounter((prevCounter) => prevCounter + 1)
+      setCounter((prevCounter) => prevCounter + 1)
+      setCounter((prevCounter) => prevCounter + 1)
       console.log(counter);
+
+      // The counter variable updates only one-time despite multiple update statements.
+      // This is because, React track the changes and send them to update the UI or Variable in bundle.
+      // So, multiple counter + 1 statement is treated as same kind of update. 
+      // For varialble, here, we're using the previous state of the variable and updating with the reference of that value.
     }    
     else{
       console.log(`Counter cannot go beyond 20`);
