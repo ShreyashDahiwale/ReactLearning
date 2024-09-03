@@ -1,7 +1,10 @@
 import { useState } from "react"
 
-function MyButton({color="blue"}) {
+function MyButton({myColor}) {
+  let [color, setColor] = useState("");
+  color = myColor.newColor;
   console.log(color);
+  console.log(myColor.newColor);
   
   return(
     <button onClick={() => setColor(color)}
@@ -29,7 +32,8 @@ function App() {
           className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
           style={{backgroundColor: "red"}}
           >Red</button>
-          < MyButton myColor="yellow"/>
+          < MyButton myColor={{newColor:"yellow"}}/>
+          < MyButton myColor={{newColor:"yellow"}}/>
           {/* < MyButton /> */}
         </div>
       </div>
