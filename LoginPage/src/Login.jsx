@@ -1,34 +1,45 @@
 import './Login.css'
+import LoggedInPage from './LoggedInPage.jsx';
+
+const myFun = function user() {
+  console.log('Clicked');
+
+  return (
+    <>
+      <LoggedInPage />
+    </>
+  )
+}
 
 function Login() {
-    return(
-        <>
-        <div classname="background">
-          <div classname="shape" />
-          <div classname="shape" />
-        </div>
-        <form>
-          <h3>Login Here</h3>
-          <label htmlfor="username">Username</label>
-          <input type="text" placeholder="Email or Phone" id="username" />
-          <label htmlfor="password">Password</label>
-          <input type="password" placeholder="Password" id="password" />
-          <button type="button" id="btn">
-            Log In
-          </button>
-          <div classname="social">
-            <div classname="go">
-              <i classname="fab fab-google" />
-              Google
-            </div>
-            <div classname="fb">
-              <i classname="fab fab-facebook" />
-              Facebook
-            </div>
+  return (
+    <>
+      <div className="background">
+        <div className="shape" />
+        <div className="shape" />
+      </div>
+      <form>
+        <h3>Login Here</h3>
+        <label htmlFor="username">Username</label>
+        <input type="text" placeholder="Email or Phone" id="username" />
+        <label htmlFor="password">Password</label>
+        <input type="password" placeholder="Password" id="password" />
+        <button type="button" id="btn" onClick={myFun}>
+          Log In
+        </button>
+        <div className="social">
+          <div className="go">
+            <i className="fab fab-google" />
+            Google
           </div>
-        </form>
-      </>
-    )
+          <div className="fb">
+            <i className="fab fab-facebook" />
+            Facebook
+          </div>
+        </div>
+      </form>
+    </>
+  )
 }
 
 export default Login

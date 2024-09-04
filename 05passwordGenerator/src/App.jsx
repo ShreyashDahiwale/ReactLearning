@@ -28,6 +28,7 @@ function App() {
     setPassword(pass);
 
   }, [length, numberAllowed, charAllowed, setPassword]);
+  // [length, numberAllowed, charAllowed, setPassword] these are the varialbes (dependencies) that we need, to track any changes in the field so that we can replicate them on UI
   // passwordGenerator();
 
   const copyPasswordToClipboard = useCallback(() => {
