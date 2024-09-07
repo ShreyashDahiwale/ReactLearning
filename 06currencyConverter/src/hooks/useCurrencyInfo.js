@@ -15,8 +15,10 @@ async function useCurrencyInfo(currency) {
                 console.log(`JsonData[currency]:`, jsonData[currency]);
                 jsonData = JSON.parse(JSON.stringify(jsonData, null, 2));
                 setData((data)=> ({...data,...jsonData[currency]}));
-            } catch (error) {
-                console.error('Error fetching data:', error);
+            } catch (err) {
+                setError(err);
+            } finally {
+                setLoading(false);
             }
         };
 
