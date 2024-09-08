@@ -24,3 +24,8 @@
 
     // In the above example, style={{}} is not a special syntax, but a regular {} object inside the style={ } JSX curly braces. 
 ```
+
+
+## import {Link, NavLink} from 'react-router-dom'
+Link is just similar to <a> tag. The difference is just, when we use <a> tag, the complete Page get refresh/reload.
+But, in React, we don't have the concept of Reload/Refresh. 
