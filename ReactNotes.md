@@ -29,3 +29,21 @@
 ## import {Link, NavLink} from 'react-router-dom'
 Link is just similar to <a> tag. The difference is just, when we use <a> tag, the complete Page get refresh/reload.
 But, in React, we don't have the concept of Reload/Refresh. 
+
+```jsx
+const listItems = products.map(product =>
+  <li key={product.id}>
+    {product.title}
+  </li>
+);
+
+return (
+  <ul>{listItems}</ul>
+);
+```
+## Rendering Lists
+Notice how <li> has a key attribute. For each item in a list, you should pass a string or a number that uniquely identifies that item among its siblings. Usually, a key should be coming from your data, such as a database ID. React uses your keys to know what happened if you later insert, delete, or reorder the items.
+
+
+```text
+Functions starting with use are called Hooks. 
