@@ -47,3 +47,7 @@ Notice how <li> has a key attribute. For each item in a list, you should pass a 
 
 ```text
 Functions starting with use are called Hooks. 
+The useCallback Hook only runs when one of its dependencies update.
+
+``` Route-DOM
+React Outlet is a component provided by React Router that serves as a placeholder for child routes within a parent route.
