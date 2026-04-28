@@ -51,3 +51,18 @@ The useCallback Hook only runs when one of its dependencies update.
 
 ``` Route-DOM
 React Outlet is a component provided by React Router that serves as a placeholder for child routes within a parent route.
+
+
+-------------------------------------------------------------
+## Redux Toolkit
+
+# Data Flow 
+# Store
+# Reducers
+# useSelector
+# useDispatch
+- Dispatch ek reducer ko use karke store mein value add karta hai
+
+# Why we use callback
+- onClick={() => dispatch(removeTodo(todo.id))}
+- We use this because when user clicks then only that function should execute not immediately

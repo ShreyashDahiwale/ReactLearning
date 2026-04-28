@@ -8,7 +8,7 @@ function AddTodo() {
     const [input, setInput] = useState('')
     const dispatch = useDispatch();
     const addTodoHandler = (e) => {
-        e.preventDefault();
+        e.preventDefault(); // we use this because forms submit directly
         dispatch(addTodo(input));
         setInput('')
     }
