@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  let [counter, setCounter] = useState(5)
+  const [counter, setCounter] = useState(5)
   // setCounter is a method that is responsible for manipulating the counter 
   // let counter = 5;
 
@@ -10,7 +10,7 @@ function App() {
     // console.log("Value Added", Math.random());
     if (counter < 20) {
       // counter = counter + 1;
-      setCounter( (prevCounter) => {return prevCounter + 1})
+      setCounter((prevCounter) => { return prevCounter + 1 })
       setCounter((prevCounter) => prevCounter + 1)
       setCounter((prevCounter) => prevCounter + 1)
       setCounter((prevCounter) => prevCounter + 1)
@@ -22,20 +22,20 @@ function App() {
       // This is because, React track the changes and send them to update the UI or Variable in bundle.
       // So, multiple counter + 1 statement is treated as same kind of update. 
       // For varialble, here, we're using the previous state of the variable and updating with the reference of that value.
-    }    
-    else{
+    }
+    else {
       console.log(`Counter cannot go beyond 20`);
     }
   }
 
-  const removeValue = () =>{
+  const removeValue = () => {
     if (counter > 0) {
       setCounter(counter - 1);
       console.log(counter);
     }
-    else{
+    else {
       console.log(`Counter cannot be less than 0`);
-      
+
     }
   }
 
@@ -44,11 +44,13 @@ function App() {
       <h1>Chai Aur React</h1>
       <h2>Counter Value: {counter}</h2>
 
+      {/* We only share the refernce of the function, not the value of the function. So, when we click on the button, it will execute the function and update the counter value. */}
+      {/* If we write the function with parenthesis, it will execute the function immediately when the component is rendered, which is not what we want. We want to execute the function only when the button is clicked. */}
       <button
-      onClick={addValue}>Add Value</button>
+        onClick={addValue}>Add Value</button>
       <br />
       <button
-      onClick={removeValue}>Decrease Value {counter}</button>
+        onClick={removeValue}>Decrease Value {counter}</button>
       <p>footer: {counter}</p>
     </>
   )
